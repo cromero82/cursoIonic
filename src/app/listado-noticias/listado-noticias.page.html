@@ -8,47 +8,18 @@
 </ion-header>
 
 <ion-content>
-  
-      <ion-card>
-          <ion-card-header>
-            <ion-card-subtitle>Noticias</ion-card-subtitle>
-            <ion-card-title>Listado de noticias</ion-card-title>
-          </ion-card-header>
-        
-          <ion-card-content>
-            Keep close to Nature's heart... and break clear away, once in awhile,
-            and climb a mountain or spend a week in the woods. Wash your spirit clean.
-            <p> <strong>Autor:</strong> Carlos romero</p>
-            <p> <strong>Fecha:</strong> 17/11/2019</p>
-          </ion-card-content>
-        </ion-card>
 
-        <ion-card>
-            <ion-card-header>
-              <ion-card-subtitle>Noticias</ion-card-subtitle>
-              <ion-card-title>Listado de noticias</ion-card-title>
-            </ion-card-header>
-          
-            <ion-card-content>
-              Keep close to Nature's heart... and break clear away, once in awhile,
-              and climb a mountain or spend a week in the woods. Wash your spirit clean.
-              <p> <strong>Autor:</strong> Carlos romero</p>
-              <p> <strong>Fecha:</strong> 17/11/2019</p>
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card>
-              <ion-card-header>
-                <ion-card-subtitle>Noticias</ion-card-subtitle>
-                <ion-card-title>Listado de noticias</ion-card-title>
-              </ion-card-header>
-            
-              <ion-card-content>
-                Keep close to Nature's heart... and break clear away, once in awhile,
-                and climb a mountain or spend a week in the woods. Wash your spirit clean.
-                <p> <strong>Autor:</strong> Carlos romero</p>
-                <p> <strong>Fecha:</strong> 17/11/2019</p>
-              </ion-card-content>
-            </ion-card>
-
+    <ion-card *ngFor="let item of noticias" >
+        <ion-card-header>
+          <ion-card-subtitle>{{item.titulo}}</ion-card-subtitle>
+          <ion-card-title>{{item.descripcion}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{item.contenido}}
+          <p> <strong>Autor:</strong> {{item.autorId}}</p>
+          <p> <strong>Fecha:</strong> {{item.fecha}}</p>
+        </ion-card-content>
+      </ion-card>
+      
 </ion-content>
